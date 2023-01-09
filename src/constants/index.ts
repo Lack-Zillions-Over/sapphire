@@ -1,7 +1,7 @@
 import { Sapphire } from '../controllers/index';
-import * as dotenv from 'dotenv';
+import { config }  from 'dotenv';
 
-dotenv.config();
+config();
 
 const sapphire = new Sapphire();
 

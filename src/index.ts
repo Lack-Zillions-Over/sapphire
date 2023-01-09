@@ -1,1 +1,1 @@
-export { default as Sapphire } from './constants/sapphire';
+export { default as Sapphire } from './constants';

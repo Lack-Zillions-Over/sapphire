@@ -1,0 +1,50 @@
+version: '3.9'
+
+services:
+  rabbitmq:
+    container_name: rabbitmq-preview
+    image: rabbitmq:3.11.6-management-alpine
+    restart: always
+    networks:
+      project_development:
+        aliases:
+          - rabbitmq
+    ports:
+      - ${RABBITMQ_PORT}:${RABBITMQ_PORT}
+      - 15672:15672 # Management port
+    volumes:
+      - rabbitmq-data:/var/lib/rabbitmq/mnesia
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=admin
+  app:
+    container_name: app-preview
+    restart: always
+    links:
+      - rabbitmq
+    depends_on:
+      - rabbitmq
+    command: yarn start
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    networks:
+      project_development:
+        aliases:
+          - backend
+    ports:
+      - ${PORT}:${PORT}
+      - 9229:9229 # Debug port
+    volumes:
+      - .:/app
+      - /node_modules
+    env_file:
+      - ./.env
+
+networks:
+  project_development:
+
+volumes:
+  project_development:
+  rabbitmq-data:

@@ -1,6 +1,6 @@
 {
   "name": "lzo-sapphire",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Pub/Sub messaging using RabbitMQ.",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",

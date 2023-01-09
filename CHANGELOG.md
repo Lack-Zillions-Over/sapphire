@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.4](https://github.com/Lack-Zillions-Over/sapphire/compare/v1.0.3...v1.0.4) (2023-01-09)
+
+
+### Docs
+
+* **readme:** removed incorrect excerpt ([8aa049f](https://github.com/Lack-Zillions-Over/sapphire/commit/8aa049f7a0fc9a26579068b5a39f5878a542f781))
+
 ### [1.0.3](https://github.com/Lack-Zillions-Over/sapphire/compare/v1.0.2...v1.0.3) (2023-01-09)
 
 

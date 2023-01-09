@@ -41,10 +41,6 @@ setTimeout(() => {
 });
 ```
 
-### Attention
-
-> Not use same Sapphire instance for subscribe and publish in same process.
-
 ## API
 
 `Sapphire.publish<T>(value: T, ...channels: string[]): Promise<string[]>`

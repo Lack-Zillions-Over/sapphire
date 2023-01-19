@@ -1,3 +1,6 @@
+env:
+	@bash setup/env.sh
+
 queue:
 	docker compose -f docker-compose.yml up -d rabbitmq
 
